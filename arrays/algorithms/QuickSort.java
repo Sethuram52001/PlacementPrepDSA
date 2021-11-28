@@ -17,26 +17,25 @@ public class QuickSort {
 
     private static int partition(int[] nums, int l, int r) {
         int pivot = nums[r];
-        int i = l - 1;
-
-        for (int j = l; j <= r - 1; j++) {
-            if (nums[j] < pivot) {
-                i++;
-                swap(nums, i, j);
+        int partitionIdx = l;
+        
+        for (int i = l; i < r; i++) {
+            if (nums[i] <= pivot) {
+                swap(nums, i, partitionIdx);
+                partitionIdx++;
             }
         }
-
-        swap(nums, i + 1, r);
-        return i + 1;
+        swap(nums, partitionIdx, r);
+        return partitionIdx;
     }
 
-    private static void quickSort(int[] nums, int l, int r) {
-        if (l < r) {
-            int pivot = partition(nums, l, r);
-            quickSort(nums, l, pivot - 1);
-            quickSort(nums, pivot + 1, r);
+    private static void quickSort(int[] nums, int l, int h) {
+        if (l < h) {
+            int pivotIdx = partition(nums, l, h);
+            quickSort(nums, l, pivotIdx - 1);
+            quickSort(nums, pivotIdx + 1, h);
         }
-    } 
+    }
     public static void main(String[] args) {
         int[] nums = new int[] { 64, 25, 12, 22, 11 };
         quickSort(nums, 0, nums.length - 1);
