@@ -1,7 +1,4 @@
-package problems;
-
 import java.util.*;
-
 /*
  Problem:
  Given an integer array nums, return the number of reverse pairs in the array.

@@ -1,3 +1,14 @@
+/*
+Problem:
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+Link: https://leetcode.com/problems/reverse-linked-list/
+
+Solution:
+Try to manipulate the pointers in such a way that we can change A -> B -> C
+to A <- B <- C
+*/
+
 class ListNode {
     int val;
     ListNode next;

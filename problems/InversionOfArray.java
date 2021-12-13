@@ -1,5 +1,3 @@
-package problems;
-
 /*
 Problem:
 For a given integer array/list 'ARR' of size 'N', find the total number of 'Inversions' that may exist.
