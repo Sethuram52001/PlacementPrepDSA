@@ -12,19 +12,20 @@ Note: The flattened list will be printed using the bottom pointer instead of nex
 Link: https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1#
 */
 
-class Node {
-    int data;
-    Node next;
-    Node bottom;
-
-    Node(int d) {
-        data = d;
-        next = null;
-        bottom = null;
-    }
-}
-
 public class FlattenLinkedList {
+
+    class Node {
+        int data;
+        Node next;
+        Node bottom;
+
+        Node(int d) {
+            data = d;
+            next = null;
+            bottom = null;
+        }
+    }
+
     Node flattenExtraSpace(Node root) {
         // Your code here
         PriorityQueue<Integer> pq = new PriorityQueue<>();

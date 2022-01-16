@@ -9,7 +9,7 @@ Try to manipulate the pointers in such a way that we can change A -> B -> C
 to A <- B <- C
 */
 
-class ListNode {
+/*class ListNode {
     int val;
     ListNode next;
 
@@ -24,7 +24,7 @@ class ListNode {
         this.val = val;
         this.next = next;
     }
-}
+}*/
 
 public class ReverseLinkedList {
     private static ListNode reverseRec(ListNode head) {
