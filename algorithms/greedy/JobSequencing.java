@@ -1,5 +1,3 @@
-import java.io.*;
-import java.lang.*;
 /*
 Problem:
 Given a set of N jobs where each jobi has a deadline and profit associated with it.
@@ -18,7 +16,6 @@ job we are checking from the last deadline, say M deadlines in the worst case.
 
 space complexity: O(M) - for an array that keeps track on which day which job is performed if M is the maximum deadline available.
 */
-
 import java.util.*;
 
 class Job {
