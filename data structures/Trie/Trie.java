@@ -1,3 +1,10 @@
+/**
+ * Time complexity: 
+ * The complexity of creating a trie is O(W*L), where W is the number of words, and L is an average length of the word: 
+ * you need to perform L lookups on the average for each of the W words in the set.
+ * Same goes for looking up words later: you perform L steps for each of the W words.
+ */
+
 class TrieNode {
     TrieNode[] links;
     boolean flag;
