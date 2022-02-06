@@ -10,6 +10,8 @@ We can create an elevation map using the matrix given, now we can apply the larg
 in the elevation map.
 */
 
+import java.util.*;
+
 public class MaximalRectangle {
     public int maximalRectangle(char[][] matrix) {
         int n = matrix.length, m = matrix[0].length;
