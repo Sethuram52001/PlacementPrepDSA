@@ -6,7 +6,8 @@ as it shows in both arrays and you may return the result in any order.
 Link: https://leetcode.com/problems/intersection-of-two-arrays-ii/
 
 Solution:
-ref: https://leetcode.com/problems/intersection-of-two-arrays-ii/discuss/282372/Java-solution-with-all-3-follow-up-questions
+ref: i. https://leetcode.com/problems/intersection-of-two-arrays-ii/discuss/282372/Java-solution-with-all-3-follow-up-questions
+     ii. https://leetcode.com/problems/intersection-of-two-arrays-ii/discuss/282372/Java-solution-with-all-3-follow-up-questions
 
 
 Follow up:
@@ -31,6 +32,10 @@ be the case. so I'd say the Time complexity is O(K(logN) + c), c (constant) is n
 
 iii. What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 This one is open-ended. But Map-Reduce I believe is a good answer.
+* If only nums2 cannot fit in memory, put all elements of nums1 into a HashMap, read chunks of array that fit into the memory, and record the 
+  intersections.
+* If both nums1 and nums2 are so huge that neither fit into the memory, sort them individually (external sort), then read 2 elements from each array at 
+  a time in memory, record intersections.
 */
 
 import java.util.*;
