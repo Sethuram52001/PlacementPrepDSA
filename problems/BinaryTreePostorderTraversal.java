@@ -6,6 +6,8 @@ Link: https://leetcode.com/problems/binary-tree-postorder-traversal/
 
 Solution:
 postorder: left - right - root
+One could put the result to the top of a linked list at each iteration. As a result, one does not need to reverse the list at the end. 
+It takes constant time to add an element to the head of a linked list, since there is no memory shift as with ArrayList.
 */
 
 public class BinaryTreePostorderTraversal {
