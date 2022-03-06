@@ -1,4 +1,5 @@
-/**
+/*
+ * Morris Traversal:
  * In this method, we have to use a new data structure-Threaded Binary Tree, and the strategy is as follows:
  * Step 1: Initialize current as root
  * Step 2: While current is not NULL,
