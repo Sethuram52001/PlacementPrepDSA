@@ -20,5 +20,18 @@ Whereas with addition and division, earlier addition will be diminished by later
 */
 
 public class BrokenCalculator {
-    
+    public int brokenCalc(int startValue, int target) {
+        int count = 0;
+        while(target > startValue) {
+            count++;
+            if(target % 2 == 1) {
+                target += 1;
+            }
+            else {
+                target /= 2;
+            }
+        }
+        
+        return count + startValue - target;
+    }   
 }
