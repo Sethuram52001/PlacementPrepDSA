@@ -38,5 +38,30 @@ public class Permutations {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
-    }   
+    }
+    
+    public List<List<Integer>> permute_(int[] nums) {
+        List<List<Integer>> permutations = new ArrayList<>();
+        boolean[] visited = new boolean[nums.length];
+        solve(nums, visited, new ArrayList<>(), permutations);
+        return permutations;
+    }
+    
+    private void solve(int[] nums, boolean[] visited, List<Integer> permutation, List<List<Integer>> permutations) {
+        if(permutation.size() == nums.length) {
+            permutations.add(new ArrayList<>(permutation));
+            return;
+        }
+        
+        for(int i = 0; i < nums.length; i++) {
+            if(visited[i]) {
+                continue;
+            }
+            permutation.add(nums[i]);
+            visited[i] = true;
+            solve(nums, visited, permutation, permutations);
+            permutation.remove(permutation.size() - 1);
+            visited[i] = false;
+        }
+    }
 }
