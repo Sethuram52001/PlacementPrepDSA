@@ -8,6 +8,10 @@ Solution:
 We can cache in the continuous sum and look for the occurence of currSum - k in the hash table.
 Since we know that if currSum - k = x has occured earlier then we can say that there is a continous subarray of sum equals k between 
 x's occurence and current index.
+
+Note:
+you can't use the sliding/stretching window technique when there are negative numbers in the array, because the sum doesn't grow 
+monotonically with the window size.
 */
 
 import java.util.*;
