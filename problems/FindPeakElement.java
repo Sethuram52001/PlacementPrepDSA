@@ -15,6 +15,10 @@ Binary search:
 we know that,
 if nums[mid] < nums[mid + 1] then there must lie a peek in range of [mid + 1, right]
 else in range of [0, mid]
+
+Some notes on why the solution works:
+1. https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=1
+2. https://leetcode.com/problems/find-peak-element/discuss/1290642/intuition-behind-conditions-complete-explanation-diagram-binary-search
 */
 
 public class FindPeakElement {
