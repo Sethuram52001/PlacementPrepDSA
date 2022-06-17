@@ -7,8 +7,8 @@ Return the minimum number of cameras needed to monitor all nodes of the tree.
 Link: https://leetcode.com/problems/binary-tree-cameras/
 
 Solution:
-Instead of trying to cover every node from the top down, let's try to cover it from the bottom up - 
-considering placing a camera with the deepest nodes first, and working our way up the tree.
+Greedy approach - Instead of trying to cover every node from the top down, let's try to cover it from 
+the bottom up - considering placing a camera with the deepest nodes first, and working our way up the tree.
 
 If a node has its children covered and has a parent, then it is strictly better to place the camera 
 at this node's parent.
