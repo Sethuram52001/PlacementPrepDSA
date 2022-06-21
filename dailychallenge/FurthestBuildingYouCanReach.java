@@ -15,6 +15,7 @@ Return the furthest building index (0-indexed) you can reach if you use the give
 Link: https://leetcode.com/problems/furthest-building-you-can-reach/
 
 Solution:
+Greed approach:
 You'll have to do a set of jumps, and choose for each one whether to do it using a ladder or bricks. It's always optimal to 
 use ladders in the largest jumps. So, what we can do is that we can use min heap to store the height difference between 2 buildings
 and when it exceeds more than the count of ladders(as we're intending to use ladders for the largest diff jumps), we pop
