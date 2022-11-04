@@ -10,6 +10,9 @@ Solution:
 2 pointers
 */
 
+import java.util.*;
+import java.util.stream.*;
+
 public class ReverseVowelsOfString {
     public String reverseVowels(String s) {
         Set<Character> vowels = Stream.of('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
