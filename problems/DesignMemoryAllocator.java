@@ -24,7 +24,12 @@ ii. efficient solution:
 a. https://leetcode.com/problems/design-memory-allocator/solutions/2899668/two-maps/?orderBy=most_votes
 b. https://leetcode.com/problems/design-memory-allocator/solutions/2899607/java-solution-treemap/?orderBy=most_votes
 
+References:
+1. https://leetcode.com/problems/design-memory-allocator/solutions/2899668/two-maps/?orderBy=most_votes
+2. https://leetcode.com/problems/design-memory-allocator/solutions/2899607/java-solution-treemap/?orderBy=most_votes
+
 */
+import java.util.*;
 
 public class DesignMemoryAllocator {
     class Allocator {
