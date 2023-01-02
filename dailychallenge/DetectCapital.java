@@ -30,14 +30,25 @@ public class DetectCapital {
     public boolean detectCapitalUse_(String word) {
         String wordU = word.toUpperCase();
         String wordL = word.toLowerCase();
-        
+
         boolean res = true;
-        for(int i = 1; i < word.length(); i++) {
-            if(Character.isUpperCase(word.charAt(i))) {
+        for (int i = 1; i < word.length(); i++) {
+            if (Character.isUpperCase(word.charAt(i))) {
                 res = false;
                 break;
             }
         }
         return res || wordU.equals(word) || wordL.equals(word);
-    }    
+    }
+    
+        public boolean detectCapitalUse_AnotherMethod(String word) {
+        int capitalCount = 0;
+        for(char ch : word.toCharArray()) {
+            if(Character.isUpperCase(ch)) {
+                capitalCount++;
+            }
+        }
+
+        return capitalCount == 0 ? true : capitalCount == 1 && Character.isUpperCase(word.charAt(0)) ? true : capitalCount == word.length();
+    }
 }
