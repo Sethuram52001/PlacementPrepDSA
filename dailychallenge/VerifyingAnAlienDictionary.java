@@ -9,7 +9,7 @@ if the given words are sorted lexicographically in this alien language.
 Link: https://leetcode.com/problems/verifying-an-alien-dictionary/description/
 
 Solution: 
-map/dictionary
+hashing - map/dictionary
 */
 
 public class VerifyingAnAlienDictionary {
