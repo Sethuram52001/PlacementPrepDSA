@@ -18,6 +18,11 @@ idx:  0 1 2 3 4 5 6
 the elements appear in pari of(odd idx, even idx)
 
 => now can use binary search to solve this case
+
+Explaination on using mid ^ 1 for comparison:
+odd ^ 1 = odd - 1
+even ^ 1 = even + 1
+=> we're basically checking whether we're getting duplicate pairs in the format of (even idx, odd idx)
 */
 
 public class SingleElementInSortedArray {
