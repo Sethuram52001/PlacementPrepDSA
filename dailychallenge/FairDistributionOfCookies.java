@@ -18,23 +18,22 @@ which is the expected result.
 */
 
 public class FairDistributionOfCookies {
-    int res = Integer.MAX_VALUE;
-
+    int minimumUnfairness = Integer.MAX_VALUE;
     public int distributeCookies(int[] cookies, int k) {
-        backtrack(cookies, k, 0, 0, new int[k]);
-        return res;
+        distributeCookies(cookies, 0, 0, new int[k]);
+        return minimumUnfairness;
     }
 
-    private void backtrack(int[] cookies, int k, int idx, int max, int[] children) {
-        if (idx >= cookies.length) {
-            res = Math.min(res, max);
+    private void distributeCookies(int[] cookies, int idx, int maximumUnfairness, int[] children) {
+        if(idx >= cookies.length) {
+            minimumUnfairness = Math.min(minimumUnfairness, maximumUnfairness);
             return;
         }
 
         int cookie = cookies[idx];
-        for (int i = 0; i < k; i++) {
+        for(int i = 0; i < children.length; i++) {
             children[i] += cookie;
-            backtrack(cookies, k, idx + 1, Math.max(max, children[i]), children);
+            distributeCookies(cookies, idx + 1, Math.max(children[i], maximumUnfairness), children);
             children[i] -= cookie;
         }
     }
